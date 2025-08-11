@@ -208,10 +208,4 @@ cd frontend
 npm test
 ```
 
-## Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır.
-
-## İletişim
-
-Sorularınız için: WhatsApp (0542 315 88 12)
