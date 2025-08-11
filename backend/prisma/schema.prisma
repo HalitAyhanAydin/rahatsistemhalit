@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AccountData {
+  id         Int      @id @default(autoincrement())
+  hesapKodu  String   @unique
+  toplamBorc Float
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("account_data")
+}
+
+model ApiLog {
+  id          Int      @id @default(autoincrement())
+  status      String
+  message     String?
+  recordCount Int?
+  createdAt   DateTime @default(now())
+
+  @@map("api_logs")
+}
